@@ -1,0 +1,15 @@
+body {
+	font-family: Calibri;
+}
+.content {
+	text-align: center;
+}			
+.content table {
+	margin: 0px auto;
+}
+.green {
+	color: green;
+}
+.red {
+	color: red;
+}

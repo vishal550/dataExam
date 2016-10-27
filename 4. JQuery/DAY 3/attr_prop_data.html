@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	</head>
+	<body>
+		<span>Checkbox 1</span>
+		<input type="checkbox" id="checkboxinput">
+		<button id="checkstatus">Check the checkbox and see the console</button>
+		<hr/>
+		<span>Enter some text</span>
+		<input type="text" id="textboxinput" data-score="100" value="100">
+		<button id="changedata">Change the custom data score</button>
+		<script>
+			document.getElementById('checkstatus').addEventListener("click", function () {
+				console.log("status of checked attribute: " + $('#checkboxinput').attr('checked'));
+				console.log("status of checked property: " + $('#checkboxinput').prop('checked'));
+			});
+
+			document.getElementById('changedata').addEventListener("click", function () {
+				$('#textboxinput').data('score', 500);
+				console.log("change score of element with id: " + $('#textboxinput').attr('id'));
+				console.log("new score is : " + $('#textboxinput').data('score'));
+			});
+		</script>
+	</body>
+</html>

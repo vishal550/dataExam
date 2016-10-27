@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function appendDiv() {
+			var node = document.createElement("div");
+			node.style.border = '1px solid green';
+			node.id = 'seconddiv'
+
+			// Create a text node
+			var textnode = document.createTextNode("Water");
+			node.appendChild(textnode); 
+			document.body.div.appendChild(node);
+		}
+		
+		function removeDiv() {
+			var node = document.getElementById('seconddiv');
+			document.div.removeChild(node);
+		}
+	</script>
+</head>
+<body>
+	<div id='firstdiv' style='border: 1px solid red'>
+		DIV1
+	</div>
+	<br>
+	<button onclick='appendDiv()'>Append</button>
+	<button onclick='removeDiv()'>Remove</button>
+</body>
+</html>
+

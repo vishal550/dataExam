@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			font-family: Calibri;
+		}
+		.even {
+			background-color: aquamarine;
+		}
+		.odd {
+			background-color: wheat;
+		}
+		.content {
+			text-align: center;
+		}
+		table, th, td {
+			border: 1px solid black;
+		}
+		table {
+			border-collapse: collapse;
+		}
+		.expenses {
+			margin: 0px auto;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script>
+		// To apply alternating background color to each row
+		function ApplyAlternatingCss(tableid) {
+			$("#" + tableid).find("tr:odd").addClass("odd");
+			$("#" + tableid).find("tr:even").addClass("even");
+		}
+	</script>
+</head>
+<body>
+	<div id="firstdiv" class="content">
+		<div id="mydiv" style="border: 1px solid red;">Expense Account</div>
+		<table id="mytable" class="expenses">
+			<tr>
+				<th>Person</th><th>Expenses (in Rs)</th>
+			</tr>
+			<tr>
+				<td>Amol</td><td>1000</td>
+			</tr>
+			<tr>
+				<td>Anurag</td><td>500</td>
+			</tr>
+			<tr>
+				<td>Gaurav</td><td>400</td>
+			</tr>
+			<tr>
+				<td>Karan</td><td>700</td>
+			</tr>
+			<tr>
+				<td>Pooja</td><td>600</td>
+			</tr>
+		</table>
+		<br>
+		<input name="MYINPUTNAME" type="button" value="Button1">
+		<input name="MYINPUTNAME" type="button" value="Button2">
+		<input name="PAYORINPUT" type="button" value="Button3">
+		<input name="PAYORINPUT" type="button" value="Button4">
+		<a href="www.google.com">Search in Google</a>
+		<a href="www.yahoo.com">Search in Yahoo</a>
+	</div>
+	<br>
+	<div id="seconddiv" style="border: 1px solid red;" class="container">
+		second div
+	</div>
+	<br>
+	<div id="thirddiv" style="border: 1px solid red;" class="container">
+		third div
+	</div>
+	<br>
+	<div id="fourthdiv" style="border: 1px solid red;" class="container bottom">
+		last div
+	</div>
+</body>
+</html>

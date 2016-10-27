@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+		function ChangeText() {
+			//var html = document.getElementById("firstdiv").innerHTML;
+			var html = jQuery("#firstdiv").html();
+			//document.getElementById("seconddiv").innerHTML = html;
+			jQuery("#seconddiv").html(html);
+			
+		}
+
+		function ChangeAttribute() {
+			// To get/set default/native attributes/properties use dot notation.
+			//var currentvalue = document.getElementById("firstinput").value;
+			var currentvalue = jQuery("#firstinput").val();
+			//document.getElementById("secondinput").value = currentvalue;
+			jQuery("secondinput").val(currentvalue);
+
+
+			// To get/set custom attribute use getAttribute()/setAttribute methods
+			//var firstinput = document.getElementById("firstinput");
+			var firstinput = jQuery("#firstinput");
+			
+			//var secondinput = document.getElementById("secondinput");
+			var secondinput = jQuery("#secondinput");
+			
+			//var newvalue = firstinput.getAttribute("score");
+			var newvalue = jQuery("#firstinput").attr("score");
+			
+			//secondinput.setAttribute("score", newvalue);
+			jQuery("#secondinput").attr("score",newvalue);
+			
+			//alert("secondinput's score: " + secondinput.getAttribute("score"));
+			alert("secondinput's score: " + jQuery("#secondinput").attr("score"));
+		
+		}
+
+		function ChangeAppearance() {
+			//var newcolor = document.getElementById("firstdiv").style.backgroundColor;
+			var newcolor = jQuery("firstdiv").attr("background-color");
+			
+			//document.getElementById("seconddiv").style.backgroundColor = newcolor;
+			jQuery("seconddiv").attr("background-color",newcolor);
+		
+		}
+	</script>
+</head>
+<body>
+	<div id="firstdiv" style="border: 2px solid red; background-color: pink;">
+		This is DIV 1 - Hello
+	</div>
+	<br>
+	<div id="seconddiv" style="border: 2px solid green; background-color: yellow;">
+		This is DIV 2 - World
+	</div>
+	<br>
+	<input id="firstinput" type="text" value="Cricket" score="200">
+	<br>
+	<br>
+	<input id="secondinput" type="text" value="Football" score="400">
+
+	<br>
+	<br>
+	<br>
+	<!--Note: Best practice to bind events is by using addEventListener()
+	and not the onclick attribute.-->
+	<button onclick="ChangeText();">ChangeText</button>
+	<button onclick="ChangeAttribute();">ChangeAttribute</button>
+	<button onclick="ChangeAppearance();">ChangeAppearance</button>
+</body>
+</html>
+

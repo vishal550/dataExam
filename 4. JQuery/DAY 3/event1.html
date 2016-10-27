@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script>
+		function Load() {
+			$("#testdiv" ).on( "click", function() {
+				alert('Click triggerred on Div');
+			});
+		}
+		
+		function ForceTrigger() {
+			$("#testdiv" ).trigger("click");
+		}
+	</script>
+</head>
+<body onload="Load();">
+	<div id="testdiv"> Click me </div>
+	<input type="button" onclick="ForceTrigger()" value="ForceTrigger"></input>
+</body>
+</html>

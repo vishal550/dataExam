@@ -1,0 +1,74 @@
+\\pune-share\Training_Cyb\Priyanka Shinde\FET_FrTP-July'2016\1.TraininContent
+
+
+
+
+
+
+
+
+
+
+
+
+
+++ 2nd demo
+	- jQuery('div')
+	- jQuery('#myelement')
+	- jQuery('div#mydiv')
+	- jQuery('.content')
+	- jQuery("[href='www.cybage.com']")
+	- jQuery("[name='button']")
+
+
+++ 3rd demo
+	- jQuery('#grandpa').find('div');
+	- jQuery('#grandpa').children('div');
+	- jQuery('#grandpa').find('div#me');
+	- jQuery('#grandpa').find();
+
+
+
+1. Select all divs
+2. Select element with id as "firstdiv"
+3. Select div with id as "mydiv"
+4. Select elements with class as "container"
+5. Select elements with classes as "container" and "bottom"
+6. Select first div
+7. Select last div
+8. Select all even trs
+9. Select all odd trs
+10. Select all elements with href attribute
+11. Select all elements with href attribute equal to www.google.com
+12. Select all elements with href attribute not equal to www.google.com
+13. Select all input elements with name attribute ending with NAME
+14. Select all input elements with name attribute starting with PAYOR
+
+
+
+
+
+
+
+
+
+
+jQuery('div')
+jQuery('#firstdiv');
+jQuery('div#mydiv');
+jQuery('.container')
+jQuery('.container.bttom')
+jQuery('.container.bottom')
+jQuery('div:first')
+jQuery('div:last')
+jQuery('tr:odd')
+jQuery('tr:even')
+jQuery("[href]")
+jQuery("[href='www.google.com']")
+jQuery("[href!='www.google.com']")
+jQuery("a[href!='www.google.com']")
+jQuery("input[name$='NAME']")
+jQuery("input[name^='PAYOR']")
+jQuery("input[name^='payor']")
+jQuery("input[name^='PAYOR']")
+

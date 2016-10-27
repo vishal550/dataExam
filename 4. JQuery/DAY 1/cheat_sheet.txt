@@ -1,0 +1,61 @@
+var testdiv = document.getElementById(“mydiv”);
+
+var testdivs = document.getElementsByName(“myname”);
+
+
+var container = document.getElementById(“mydiv”); 	
+var testdivs = container.getElementsByTagName(“div”);
+
+
+var container = document.getElementById(“mydiv”);
+var testdivs = container.getElementsByClassName(‘myclass’);
+
+
+function ChangeText() {
+	var html = document.getElementById("firstdiv").innerHTML;
+	document.getElementById("seconddiv").innerHTML = html;
+}
+
+function ChangeAttribute() {
+	// To get/set default/native attributes/properties use dot notation.
+	var currentvalue = document.getElementById("firstinput").value;
+	document.getElementById("secondinput").value = currentvalue;
+
+	// To get/set custom attribute use getAttribute()/setAttribute methods
+	var firstinput = document.getElementById("firstinput");
+	var secondinput = document.getElementById("secondinput");
+	var newvalue = firstinput.getAttribute("score");
+	secondinput.setAttribute("score", newvalue);
+	alert("secondinput's score: " + secondinput.getAttribute("score"));
+}
+
+function ChangeAppearance() {
+	var newcolor = document.getElementById("firstdiv").style.backgroundColor;
+	document.getElementById("seconddiv").style.backgroundColor = newcolor;
+}
+
+function appendDiv() {
+	var node = document.createElement("div");
+	node.style.border = '1px solid green';
+	node.id = 'seconddiv'
+
+	// Create a text node
+	var textnode = document.createTextNode("Water");
+	node.appendChild(textnode); 
+	document.body.appendChild(node);
+}
+
+function removeDiv() {
+	var node = document.getElementById('seconddiv');
+	document.body.removeChild(node);
+}
+
+document.addEventListener(‘click’, function () { 
+	alert('Click on document');
+});
+
+
+<link rel="stylesheet" type="text/css" href="sampledom.css">
+<script src="sampledom.js"></script>
+
+
